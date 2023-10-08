@@ -4,7 +4,7 @@ from .serializers import TodoSerializer
 
 
 class TodoViewSet(viewsets.ModelViewSet):
-    queryset = Todo.objects.all()
+    queryset = Todo.objects.all().order_by('title')
     permission_classes = [
         permissions.AllowAny
     ]
